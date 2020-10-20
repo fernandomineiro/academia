@@ -1,0 +1,99 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="medium">
+    
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+    <div class="ion-text-center">
+      <img id="top" src="./assets/img/logo.png" width="100"class="slide-image" />
+    </div> 
+
+    <ion-buttons slot="end">
+      <ion-badge color="tertiary"></ion-badge>
+      <ion-fab-button class="icon-shadow" color="dark" size="small">
+        <ion-icon name="notifications"></ion-icon>
+      </ion-fab-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- INICIO HEADER -->
+  <section class="perfil ion-padding-horizontal">
+
+    <ion-item lines="none">
+      <ion-avatar slot="start"> 
+        <img defaultImage="./assets/img/placeholder.png" [lazyLoad]="'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y'">
+      </ion-avatar>
+      <ion-label>
+        <h3 class="nome">Leonardo Santos</h3>
+        <p class="nivel">Nível Roxo</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-chip>
+      <ion-button style="--padding-end: 0;" class="ion-no-margin" fill="clear" size="small" routerLink="/body">
+        <ion-icon name="body" color="primary" slot="start"></ion-icon>
+        <ion-label color="primary">MEU CORPO</ion-label>
+      </ion-button>
+      <ion-button class="ion-no-margin" fill="clear" size="small" routerLink="/conquest">
+        <ion-icon name="trophy" color="primary" slot="start"></ion-icon>
+        <ion-label color="primary">OBJETIVOS E CONQUISTAS</ion-label>
+      </ion-button>
+    </ion-chip>
+
+  </section><!-- FIM PERSONAL ONLINE -->
+
+  <!-- INICIO PERSONAL ONLINE -->
+  <section class="ion-padding-vertical locked">
+    <h3 class="ion-padding-horizontal">PERSONAL ONLINE <ion-icon color="danger" name="lock-closed"></ion-icon></h3>
+
+    <ion-slides pager="false" [options]="slideOptsTwo">
+      <ion-slide (click)="blockPage()">
+        <div class="swiper-slide">
+          <img src="./assets/img/bg-slide-home.jpg" class="slide-image" />
+          <div class="add-treino">
+            <ion-chip>
+              <ion-icon name="add-circle-outline" color="light"></ion-icon>
+              <ion-label color="light">NOVO<br />TREINO</ion-label>
+            </ion-chip>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide (click)="blockPage()" *ngFor="let s of sliderTwo.slidesItems; let n = index">
+        <div class="swiper-slide">
+          <img src="./assets/img/bg-slide-home.jpg" class="slide-image" />
+          <div class="text-slider">
+            <ion-label>
+              <h2>TREINO {{ n+1 }}</h2>
+            </ion-label>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+  </section><!-- FIM PERSONAL ONLINE -->
+  
+  <!-- INICIO PROGRAMAS -->
+  <section class="ion-padding-vertical">
+    <h3 class="ion-padding-horizontal">PROGRAMAS</h3>
+
+    <ion-slides (click)="navigateTo('/video')" pager="false" [options]="slideOptsTwo">
+      <ion-slide *ngFor="let s of sliderTwo.slidesItems">
+        <div class="swiper-slide">
+          <img src="./assets/img/bg-slide-home.jpg" class="slide-image" />
+          <div class="text-slider">
+            <ion-label>
+              <p>continuar treinando</p>
+              <h2>LEVANTAMENTO DE PESO</h2>
+            </ion-label>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+  </section><!-- FIM PROGRAMAS -->
+  
+</ion-content>

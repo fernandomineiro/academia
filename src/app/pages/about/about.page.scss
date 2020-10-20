@@ -1,0 +1,15 @@
+ion-content {
+  --ion-background-color: var(--ion-color-dark);
+}
+
+.img-bg {
+  background: #000 url('../../../assets/img/background1.png') no-repeat top center;
+  background-size: cover !important;
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  color: #FFF;
+  font-size: 15px;
+}

@@ -1,0 +1,80 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="white">Aula de yoga</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-fab-button class="icon-shadow" color="medium" size="small">
+        <ion-icon color="primary" name="share-social-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollEvents="true" parallax-header>
+ 
+  <div class="header-paralax">
+    <div class="image-video">
+      <!--img defaultImage="./assets/img/placeholder-slide.png" [lazyLoad]="'https://picsum.photos/800/450'" />
+      <ion-icon color="primary" name="play"></ion-icon-->
+      <div #player_container id="player_container"></div>
+    </div>
+  </div>
+
+  <div class="time">
+    <ion-chip>
+      <ion-icon name="time-outline" color="primary" style="margin-left: 5px;"></ion-icon>
+      <ion-label color="white" style="margin-right: 10px;">10min</ion-label>
+      
+      <ion-icon name="body" color="primary" size="small"></ion-icon>
+      <ion-label color="white" style="margin-left: 5px;">140kg</ion-label>
+    </ion-chip>
+  </div>
+  
+  <section class="content">
+    <section class="ion-padding">
+      <ion-segment mode="md" [(ngModel)]="page">
+        <ion-segment-button value="0" (click)="selectedTab(0)">
+          <ion-label >PROGRAMAS</ion-label>
+        </ion-segment-button>
+        <ion-segment-button  value="1" (click)="selectedTab(1)">
+          <ion-label>COMENTÁRIOS</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </section>
+
+    <ion-slides #slider (ionSlideWillChange)="moveButton()">
+      <!-- INÍCIO PROGRAMAS -->
+      <ion-slide class="programas">
+        
+        <ion-list>
+
+          <ion-item *ngFor="let a of item" (click)="openVideo(182592195)">
+            <ion-avatar class="list-image-video">
+              <img defaultImage="./assets/img/placeholder-slide.png" [lazyLoad]="'https://picsum.photos/800/500'" />
+              <ion-icon color="primary" name="play"></ion-icon>
+            </ion-avatar>
+            <ion-label>
+              <h2>Apresentação</h2>
+              <p>Prof. Júlia 140kg</p>
+            </ion-label>
+            <ion-note slot="end" color="white">
+              <ion-icon name="time-outline" color="primary" size="small" style="margin-bottom: -5px;"></ion-icon> 10min
+            </ion-note>
+          </ion-item>
+        
+        </ion-list>
+
+      </ion-slide><!-- FIM PROGRAMAS -->
+      <!-- INÍCIO COMENTÁRIOS -->
+      <ion-slide>
+        <empty-view text="Ainda não possui comentários" icon="sad"></empty-view>
+      </ion-slide><!-- FIM COMENTÁRIOS -->
+    </ion-slides>
+  </section>
+
+</ion-content>
+  

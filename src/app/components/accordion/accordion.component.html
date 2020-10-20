@@ -1,0 +1,10 @@
+<div class="accordion">
+  <h5 class="text-normal" (click)="toggle()">
+    {{ name }}
+    <ion-icon name="arrow-up" *ngIf="isOpen"></ion-icon>
+    <ion-icon name="arrow-down" *ngIf="!isOpen"></ion-icon>
+  </h5>
+  <div class="accordion-content" [ngClass]="this.isOpen ? 'active' : 'inactive'">
+    <ng-content></ng-content>
+  </div>
+</div>

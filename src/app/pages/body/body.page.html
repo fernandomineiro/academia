@@ -1,0 +1,77 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Meu corpo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- INÍCIO PERFIL -->
+  <section class="perfil ion-text-center">
+    <ion-avatar> 
+      <img defaultImage="./assets/img/placeholder.png" [lazyLoad]="'https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y'">
+    </ion-avatar>
+    <ion-label>
+      <h3 class="nome">Leonardo Santos</h3>
+      <p>
+        <ion-text color="primary" style="font-weight: 100; margin-right: 5px;">26 anos</ion-text>
+        <ion-text color="purple">Nível Roxo</ion-text>
+      </p>
+    </ion-label>
+
+    <ion-chip>
+      <ion-button class="ion-no-margin" fill="clear" size="small" routerLink="/conquest">
+        <ion-icon name="trophy" color="primary" slot="start"></ion-icon>
+        <ion-label color="primary">OBJETIVOS E CONQUISTAS</ion-label>
+      </ion-button>
+    </ion-chip>
+  </section> <!-- FIM PERFIL -->
+
+  <div class="ion-text-center ion-margin">
+    <h3>MEU CORPO</h3>
+  </div>
+
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="6">
+        <div class="grid">
+          <ion-label>
+            <ion-icon color="primary" name="barbell"></ion-icon>
+            <p>PESO</p>
+            <h2>80kg</h2>
+          </ion-label>
+        </div>
+      </ion-col> 
+      <ion-col size="6">
+        <div class="grid">
+          <ion-label>
+            <ion-icon color="primary" name="swap-vertical"></ion-icon>
+            <p>ALTURA</p>
+            <h2>182cm</h2>
+          </ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <div class="grid">
+          
+          <ion-item>
+            <ion-label class="ion-text-center">
+              <ion-icon color="primary" name="body"></ion-icon>
+              <p>IMC</p>
+            </ion-label>
+            <ion-label class="ion-text-center">
+              <h2>00kg/m²</h2>
+            </ion-label>
+          </ion-item>
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

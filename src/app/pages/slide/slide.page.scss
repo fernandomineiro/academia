@@ -1,0 +1,96 @@
+
+  ion-content {
+    --ion-background-color: #111d12;
+  }
+  
+  #img1{
+    position: relative;
+    top: 15%;
+    width: 90%;
+    left: 5%;
+    height: 40%;
+  }
+
+  ion-slides {
+    height: 50%;
+  }
+
+  .swiper-slide {
+    display: block;
+  }
+
+  .swiper-slide h2 {
+    margin-top: 2.8rem;
+  }
+
+  .swiper-slide img {
+    max-height: 50%;
+    max-width: 80%;
+    margin: 60px 0 40px;
+    pointer-events: none;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  p {
+    padding: 0 40px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ion-color-step-600, #60646b);
+  }
+
+  p b {
+    color: var(--ion-text-color, #000000);
+  }
+
+  #quadrado{
+    width: 76px;
+    height: 76px;
+    background: #F07D07 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 4px #F07D07C9;
+    border-radius: 14px;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+  }
+
+  #img2{
+    position: relative;
+    top: -30%;
+    transform: translateY(-50%);
+    
+  }
+  
+  #palavra{
+    text-align: center;
+    font: normal normal normal 15px/20px Oswald;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+
+  #bola1{
+    background: #F07D07 0% 0% no-repeat padding-box;
+opacity: 1;
+  }
+
+  .img44{
+    position: absolute;
+    z-index: 1;
+    left: 23%;
+    height: 70px;
+  }
+  .button1{
+      left: 10%;
+      position: relative;
+  }
+
+  .button2{
+    left: 60%;
+    position: relative;
+    top:-20%;
+}

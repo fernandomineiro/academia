@@ -1,0 +1,7 @@
+{
+  "name": "Be220AppStarter",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

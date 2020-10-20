@@ -1,0 +1,76 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="white">Personal Online</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-text-center">
+    <ion-button fill="clear" size="small" color="white">
+      Editar ficha
+      <ion-icon name="create-outline" slot="end"></ion-icon>
+    </ion-button>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col size="1">
+        <ion-icon class="icone5" name="chevron-back-outline" (click)="slidePrev(sliderTwo,slideWithNav2)">
+          <div class="prev-icon-custom custon-nav" style="color: white" [class.disabled]="sliderTwo.isBeginningSlide"></div>
+        </ion-icon>
+      </ion-col>
+      <ion-col size="10">
+
+        <ion-slides class="slide" pager="false" [options]="slideOptsTwo" #slideWithNav2
+          (ionSlideDidChange)="SlideDidChange(sliderTwo,slideWithNav2)">
+          <ion-slide *ngFor="let s of sliderTwo.slidesItems">
+            
+            <div class="slider-content">
+              <img src="./assets/conteudos/component16.png" />
+              
+              <div class="sessoes">
+                <ion-chip>
+                  <p class="number primary">7</p>
+                  <ion-label color="primary">SESSÕES</ion-label>
+
+                  <div style="width: 5px;"></div>
+
+                  <p class="number">2</p>
+                  <ion-label color="white">CONCLUÍDAS</ion-label>
+                </ion-chip>
+              </div>
+
+              <div class="ficha-descricao">
+                <ion-label>
+                  <p class="primary">FICHA A</p>
+                  <h3>TRONCO E BRAÇOS</h3>
+                  <p>0 SESSÕES CONCLUÍDAS</p>
+                </ion-label>
+               </div>
+            </div>
+            
+          </ion-slide>
+          
+        </ion-slides>
+        
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon class="icone6" name="chevron-forward-outline" (click)="slideNext(sliderTwo,slideWithNav2)">
+          <div class="next-icon-custom custon-nav" [class.disabled]="sliderTwo.isEndSlide"></div>
+        </ion-icon>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="block" size="large" class="ion-margin" shape="round" routerLink="/round">
+    COMEÇAR
+  </ion-button>
+</ion-footer>

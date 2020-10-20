@@ -1,0 +1,154 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="white">Tronco e braço</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-fab-button class="icon-shadow" color="medium" size="small">
+        <ion-icon color="primary" name="share-social-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollEvents="true" parallax-header>
+ 
+  <div class="header-paralax">
+    <div class="image-video">
+      <!--img defaultImage="./assets/img/placeholder-slide.png" [lazyLoad]="'https://picsum.photos/800/450'" />
+      <ion-icon color="primary" name="play"></ion-icon-->
+      <div #player_container id="player_container"></div>
+    </div>
+  </div>
+
+  <div class="time">
+    <ion-chip>
+      <ion-icon name="time-outline" color="primary" style="margin-left: 5px;"></ion-icon>
+      <ion-label color="white" style="margin-right: 10px;">10min</ion-label>
+      
+      <ion-icon name="body" color="primary" size="small"></ion-icon>
+      <ion-label color="white" style="margin-left: 5px;">10 calorias</ion-label>
+    </ion-chip>
+  </div>
+  
+  <section class="content">
+    <section class="ion-padding">
+      <ion-segment mode="md" [(ngModel)]="page">
+        <ion-segment-button value="0" (click)="selectedTab(0)">
+          <ion-label >RODADA 1</ion-label>
+        </ion-segment-button>
+        <ion-segment-button  value="1" (click)="selectedTab(1)">
+          <ion-label>RODADA 2</ion-label>
+        </ion-segment-button>
+        <ion-segment-button  value="2" (click)="selectedTab(2)">
+          <ion-label>RODADA 3</ion-label>
+        </ion-segment-button>
+        <ion-segment-button  value="3" (click)="selectedTab(3)">
+          <ion-label>RODADA 4</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </section>
+
+    <ion-slides #slider (ionSlideWillChange)="moveButton()">
+      
+      <ion-slide class="programas">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae commodo ipsum. Sed finibus consequat magna porta volutpat. Vivamus velit quam, molestie vel ipsum in, facilisis consequat lectus</p>
+        
+          <ion-list>
+
+            <ion-item *ngFor="let a of item" (click)="openVideo(182592195)">
+              <ion-avatar class="list-image-video">
+                <img defaultImage="./assets/img/placeholder-slide.png" [lazyLoad]="'https://picsum.photos/800/500'" />
+                <ion-icon color="primary" name="play"></ion-icon>
+              </ion-avatar>
+              <ion-label>
+                <h2>PESO BÁSICO</h2>
+                <p>2 séries 10 exercícios</p>
+              </ion-label>
+              <ion-note slot="end" color="white">
+                <ion-icon name="time-outline" color="primary" size="small" style="margin-bottom: -5px;"></ion-icon> 10min
+              </ion-note>
+            </ion-item>
+          
+          </ion-list>
+        </div>
+      </ion-slide>
+      <ion-slide class="programas">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae commodo ipsum. Sed finibus consequat magna porta volutpat. Vivamus velit quam, molestie vel ipsum in, facilisis consequat lectus</p>
+        
+          <ion-list>
+
+            <ion-item *ngFor="let a of item" (click)="openVideo(182592195)">
+              <ion-avatar class="list-image-video">
+                <img defaultImage="./assets/img/placeholder-slide.png" [lazyLoad]="'https://picsum.photos/800/500'" />
+                <ion-icon color="primary" name="play"></ion-icon>
+              </ion-avatar>
+              <ion-label>
+                <h2>PESO BÁSICO</h2>
+                <p>2 séries 10 exercícios</p>
+              </ion-label>
+              <ion-note slot="end" color="white">
+                <ion-icon name="time-outline" color="primary" size="small" style="margin-bottom: -5px;"></ion-icon> 10min
+              </ion-note>
+            </ion-item>
+          
+          </ion-list>
+        </div>
+      </ion-slide>
+      <ion-slide class="programas">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae commodo ipsum. Sed finibus consequat magna porta volutpat. Vivamus velit quam, molestie vel ipsum in, facilisis consequat lectus</p>
+        
+          <ion-list>
+
+            <ion-item *ngFor="let a of item" (click)="openVideo(182592195)">
+              <ion-avatar class="list-image-video">
+                <img defaultImage="./assets/img/placeholder-slide.png" [lazyLoad]="'https://picsum.photos/800/500'" />
+                <ion-icon color="primary" name="play"></ion-icon>
+              </ion-avatar>
+              <ion-label>
+                <h2>PESO BÁSICO</h2>
+                <p>2 séries 10 exercícios</p>
+              </ion-label>
+              <ion-note slot="end" color="white">
+                <ion-icon name="time-outline" color="primary" size="small" style="margin-bottom: -5px;"></ion-icon> 10min
+              </ion-note>
+            </ion-item>
+          
+          </ion-list>
+        </div>
+      </ion-slide>
+      <ion-slide class="programas">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae commodo ipsum. Sed finibus consequat magna porta volutpat. Vivamus velit quam, molestie vel ipsum in, facilisis consequat lectus</p>
+        
+          <ion-list>
+
+            <ion-item *ngFor="let a of item" (click)="openVideo(182592195)">
+              <ion-avatar class="list-image-video">
+                <img defaultImage="./assets/img/placeholder-slide.png" [lazyLoad]="'https://picsum.photos/800/500'" />
+                <ion-icon color="primary" name="play"></ion-icon>
+              </ion-avatar>
+              <ion-label>
+                <h2>PESO BÁSICO</h2>
+                <p>2 séries 10 exercícios</p>
+              </ion-label>
+              <ion-note slot="end" color="white">
+                <ion-icon name="time-outline" color="primary" size="small" style="margin-bottom: -5px;"></ion-icon> 10min
+              </ion-note>
+            </ion-item>
+          
+          </ion-list>
+        </div>
+      </ion-slide>
+
+    </ion-slides>
+  </section>
+
+</ion-content>
+  

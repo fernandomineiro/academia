@@ -1,0 +1,83 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/body"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Conquistas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- INÍCIO HEADER -->
+  <section class="perfil ion-text-center">
+    <div class="perfil-conquistas"> 
+      <img class="icon-second" src="./assets/conteudos/component18.png" />
+    
+      <img src="./assets/conteudos/component17.png" />
+   
+      <img class="icon-second" src="./assets/conteudos/component19.png" />
+    </div>  
+
+    <div class="nivel">
+      <ion-text color="purple">Nível Roxo</ion-text>
+    </div>
+    <app-progress-bar value="70%" color="var(--ion-color-purple)"></app-progress-bar>
+
+    <p>
+      <ion-text color="purple">7 objetivos </ion-text>
+      <ion-text color="white">para o próximo nível</ion-text>
+    </p>
+  </section><!-- FIM HEADER -->
+
+  <section class="ion-padding">
+    <ion-segment mode="md" [(ngModel)]="page">
+      <ion-segment-button value="0" (click)="selectedTab(0)">
+        <ion-label >TODAS CONQUISTAS</ion-label>
+      </ion-segment-button>
+      <ion-segment-button  value="1" (click)="selectedTab(1)">
+        <ion-label>OBJETIVOS</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </section>
+
+  <ion-slides #slider (ionSlideWillChange)="moveButton()">
+    <!-- INÍCIO TODAS CONQUISTAS -->
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <img src="./assets/conteudos/component25.png" />
+          </ion-col>
+          <ion-col size="4">
+            <img src="./assets/conteudos/component26.png" />
+          </ion-col>
+          <ion-col size="4">
+            <img src="./assets/conteudos/component27.png" />
+          </ion-col>
+          <ion-col size="4">
+            <img src="./assets/conteudos/component25.png" />
+          </ion-col>
+          <ion-col size="4">
+            <img src="./assets/conteudos/component26.png" />
+          </ion-col>
+          <ion-col size="4">
+            <img src="./assets/conteudos/component27.png" />
+          </ion-col>
+          <ion-col size="4">
+            <img src="./assets/conteudos/component26.png" />
+          </ion-col>
+          <ion-col size="4">
+            <img src="./assets/conteudos/component27.png" />
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+    
+    </ion-slide><!-- FIM TODAS CONQUISTAS -->
+    <!-- INÍCIO OBJETIVOS -->
+    <ion-slide>
+      <p class="objetivos">Se manter ativo por 3 meses</p>
+    </ion-slide><!-- FIM TODAS CONQUISTAS -->
+  </ion-slides>
+
+</ion-content>

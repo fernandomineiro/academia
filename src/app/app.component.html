@@ -1,0 +1,46 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+
+        <ion-list id="inbox-list">          
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item class="lista" (click)="selectedIndex = i; selectedIndex2 = selectedIndex3 = -1" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+              <ion-icon [name]="p.icon"></ion-icon>
+              <ion-label class="primeirot">{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list id="labels-list">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of labels; let i = index"> 
+              <ion-item class="lista" (click)="selectedIndex2 = i; selectedIndex3 = selectedIndex = -1" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex2 == i">
+                <ion-icon [name]="p.icon"></ion-icon>
+                <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+ 
+        <ion-list id="about-list" style="margin-top: 10%;">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of labels2; let i = index"> 
+              <ion-item class="lista" (click)="selectedIndex3 = i; selectedIndex1 = selectedIndex2 = -1" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex3 == i">
+                <ion-icon [name]="p.icon"></ion-icon>
+                <ion-label class="terceirot">{{ p.title  }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+      </ion-content>
+      
+      <ion-footer>
+        <ion-menu-toggle>
+          <ion-button expand="full" routerLink="/pre-login">
+            <ion-icon name="exit-outline" slot="start"></ion-icon>
+            Sair
+          </ion-button>
+        </ion-menu-toggle>
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

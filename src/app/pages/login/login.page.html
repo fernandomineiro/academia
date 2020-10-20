@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+  
+  <section class="img-bg">
+    <ion-toolbar class="transparent">
+      <ion-buttons slot="end">
+        <ion-button (click)="onDismiss()" color="white">
+          Entrar depois
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    
+    <div class="logo">
+      <img src="./assets/img/logo.png" />
+    </div>
+
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input type="email" placeholder="EMAIL"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" placeholder="SENHA"></ion-input>
+      </ion-item>
+      
+      <ion-button expand="block" size="large" class="ion-margin-bottom" shape="round" routerLink="/home">
+        CADASTRAR
+      </ion-button>
+      
+      <ion-toolbar id="toolbar2" color="black">
+        <div class="ion-text-center">
+          <ion-button size="small" fill="clear" color="white" class="ion-margin-bottom" shape="round" (click)="openRecovery()">
+            Esqueci minha senha
+          </ion-button>
+        </div>
+      </ion-toolbar>
+    </div>
+
+  </section>
+</ion-content> 
+
+ 

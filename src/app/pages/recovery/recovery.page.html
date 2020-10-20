@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  
+  <section class="img-bg">
+    <ion-toolbar class="transparent">
+      <ion-buttons slot="end">
+        <ion-button (click)="onDismiss()" color="white">
+          Fechar
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    
+    <div class="logo">
+      <img src="./assets/img/logo.png" />
+    </div>
+
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input type="email" placeholder="EMAIL"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" size="large" class="ion-margin-bottom" shape="round" (click)="save()">
+        Recuperar Senha
+      </ion-button>
+
+    </div>
+
+  </section>
+</ion-content> 
+
+ 

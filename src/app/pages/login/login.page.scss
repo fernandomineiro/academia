@@ -1,0 +1,19 @@
+.img-bg {
+  background: #000 url('../../../assets/img/background1.png') no-repeat top center;
+  background-size: cover !important;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+}
+ 
+.logo{
+  width: 100%;
+  text-align: center;
+  margin-top: 25%;
+  margin-bottom: 50px;
+  
+  img {
+    max-width: 235px;
+  }
+}

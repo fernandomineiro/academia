@@ -1,0 +1,110 @@
+ion-content {
+    --ion-background-color: #111d12;
+  }
+  
+  #img1{
+    position: relative;
+    top: 15%;
+    width: 90%;
+    left: 5%;
+    height: 40%;
+  }
+  
+  #toolbar{
+    position: absolute;
+    top: 5%;
+    z-index: 1;
+    
+    }
+ 
+  
+
+  #button{
+    background: transparent;
+    border: none !important;
+    font-size:0;
+  }
+
+  ion-input{
+    --placeholder-color: white;
+    --placeholder-opacity: 1;
+    --placeholder-font-size: 18px;
+    --placeholder-left: 10%;
+    --placeholder-position: absolute;
+
+}
+
+.button{
+  background: transparent;
+  border: none !important;
+  font-size:0;
+  box-shadow: 0px 2px 15px #F17A00AD;
+border-radius: 25%;
+opacity: 1;
+height: 52px;
+left:10%;
+width: 80%;
+position: relative;
+z-index: 0;
+background-color: #F07D07;
+
+} 
+
+.letra{
+  color:white;
+  z-index: 1;
+  font: normal normal medium 23px/34px Oswald;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+font-size: 23px;
+font-weight: 700;
+width: 150%;
+left: -25%;
+} 
+.campo{
+  border: 1px solid #FFFFFF;
+border-radius: 25px;
+opacity: 1; 
+left: 10%;
+width: 80%; 
+height: 52px;
+
+text-align: left;
+font: normal normal 300 18px/26px Oswald;
+letter-spacing: 0px;
+color: white;
+opacity: 1;
+font-size: 18px;
+font-weight: 700;
+padding-left: 10px;
+margin-bottom: 10%;
+
+}  
+
+#texto{
+  
+font: normal normal 300 12px/17px Oswald;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+color:white;
+font-size: 12px;
+}
+
+#posicao{
+  position: relative;
+  top: 10%;
+}
+
+.dado{
+    text-align: left;
+font: normal normal normal 25px/37px Oswald;
+letter-spacing: 0px;
+color: #F07D07;
+opacity: 1;
+font-size: 25px;
+position: relative;
+left: 10%;
+font-weight: 700;
+}
